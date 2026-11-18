@@ -95,37 +95,3 @@ Los resultados obtenidos de las siguientes pruebas corresponden a la lógica imp
 | 6 | Pares: 2,4,6, suma 12; impares: 1,3,5, suma 9; ganan pares | Coincide |
 | 0 | Error: límite inferior es 1 | Coincide: muestra error |
 | 101 | Error: supera el máximo de 100 | Coincide: muestra error |
-
-## Errores frecuentes que se deben evitar
-
-1. No convertir `input.value` a número antes de operar.
-2. Olvidar validar campos vacíos.
-3. Comparar números como texto en vez de valores numéricos.
-4. Olvidar `break` en los casos de `switch`.
-5. Usar `=` en lugar de `===` al comparar.
-6. Olvidar `preventDefault()` y provocar que el formulario recargue la página.
-7. Confundir el límite final del ciclo `for` o no actualizar las sumas.
-
-## Publicación y entrega
-
-Para completar los entregables de la actividad:
-
-1. **Página publicada:** sube la carpeta a GitHub Pages, Netlify o un servicio equivalente y pega aquí la URL pública: `PENDIENTE`.
-2. **Repositorio Git:** crea un repositorio, sube todos los archivos y pega aquí la URL: `PENDIENTE`.
-3. **Video (máximo 3 minutos):** graba la demostración y pega aquí el enlace con permisos de visualización: `PENDIENTE`.
-4. **Capturas:** guarda una captura de la interfaz y al menos un resultado de cada ejercicio en una carpeta `evidencias/` o intégralas en este README.
-
-### Guion sugerido para el video
-
-- 0:00–0:20: presenta el proyecto y recorre la página.
-- 0:20–1:45: demuestra un cálculo de cada ejercicio.
-- 1:45–2:40: explica `if/else`, `switch`, `for`, funciones y eventos.
-- 2:40–3:00: muestra validaciones y archivos del repositorio.
-
-## Datos de entrega
-
-- Nombre del estudiante/equipo: ______________________________
-- Página publicada: __________________________________________
-- Repositorio Git: ____________________________________________
-- Video: _____________________________________________________
-- Fecha: _____________________________________________________
