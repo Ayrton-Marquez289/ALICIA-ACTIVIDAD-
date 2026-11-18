@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tres desafíos interactivos inspirados en Alicia en el País de las Maravillas.">
+  <title>Alicia | Un viaje por JavaScript</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Una aventura de lógica y curiosidad</p>
+    <h1>ALICIA <em>en el país</em><br>de las maravillas </h1>
+    <p class="hero-copy">Tres desafíos, tres personajes y un mundo de posibilidades.</p>
+    <a class="scroll-link" href="#aventuras">EXPLORAR LAS AVENTURAS <span>↓</span></a>
+    <div class="hero-orbit orbit-one">✧</div><div class="hero-orbit orbit-two">♠</div>
+  </header>
+
+  <main id="aventuras">
+    <section class="intro">
+      <p class="eyebrow">ELIGE TU CAMINO</p>
+      <h2>¿Qué aventura resolverás primero?</h2>
+      <p>Completa cada formulario y descubre cómo las decisiones, los cálculos y los ciclos dan vida a la programación.</p>
+    </section>
+
+    <section class="adventure potion" aria-labelledby="potion-title">
+      <div class="section-number">01 <span>· SECUENCIAL + IF / ELSE</span></div>
+      <div class="section-heading">
+        <div><p class="eyebrow">BEBE CON CUIDADO</p><h2 id="potion-title">La poción mágica</h2></div>
+        <div class="character-icon">♜</div>
+      </div>
+      <p class="story">Alicia encuentra una pequeña botella sobre la mesa. Su contenido puede cambiar su tamaño. ¿Logrará atravesar la puerta del jardín?</p>
+      <div class="rule-box">
+        <span class="rule-label">REGLA MATEMÁTICA</span>
+        <strong>Altura final = altura inicial − (poción × 2)</strong>
+        <small>Cada mililitro reduce 2 cm. La puerta mide 150 cm. Dosis permitida: de 0 a 100 ml.</small>
+      </div>
+      <form id="form-pocion" class="form-card" novalidate>
+        <div class="field">
+          <label for="altura">Altura inicial de Alicia (cm)</label>
+          <input id="altura" name="altura" type="number" min="1" max="300" step="any" placeholder="Ej. 165" required>
+        </div>
+        <div class="field">
+          <label for="cantidad-pocion">Cantidad de poción (ml)</label>
+          <input id="cantidad-pocion" name="pocion" type="number" min="0" max="100" step="any" placeholder="Ej. 12" required>
+        </div>
+        <button class="btn btn-teal" type="submit">CALCULAR MI TAMAÑO <span>↗</span></button>
+      </form>
+      <div id="resultado-pocion" class="result" aria-live="polite"><span class="result-mark">✧</span><p>Tu resultado aparecerá aquí, viajero.</p></div>
+    </section>
+
+    <section class="adventure tea" aria-labelledby="tea-title">
+      <div class="section-number">02 <span>· SWITCH + CONDICIONAL</span></div>
+      <div class="section-heading">
+        <div><p class="eyebrow">¡LA MERIENDA ESTÁ SERVIDA!</p><h2 id="tea-title">El té del Sombrerero</h2></div>
+        <div class="character-icon">☕</div>
+      </div>
+      <p class="story">El Sombrerero Loco te invita a su mesa. Escoge tu bebida y la cantidad de tazas. ¡Si pides cinco o más, tendrás un descuento especial!</p>
+      <div class="price-menu">
+        <div><span>☕</span><b>Té clásico</b><strong>Bs 8</strong></div>
+        <div><span>🍋</span><b>Limonada</b><strong>Bs 10</strong></div>
+        <div><span>🍫</span><b>Chocolate</b><strong>Bs 12</strong></div>
+        <div><span>🌿</span><b>Infusión</b><strong>Bs 7</strong></div>
+      </div>
+      <p class="discount-note">★ DESCUENTO: 10% al comprar 5 tazas o más. Máximo: 20 tazas.</p>
+      <form id="form-merienda" class="form-card" novalidate>
+        <div class="field">
+          <label for="invitado">Nombre del invitado</label>
+          <input id="invitado" name="invitado" type="text" maxlength="50" placeholder="¿Cómo te llamas?" required>
+        </div>
+        <div class="field">
+          <label for="bebida">Elige tu bebida</label>
+          <select id="bebida" name="bebida" required>
+            <option value="">Selecciona una opción</option>
+            <option value="te">Té clásico — Bs 8</option>
+            <option value="limonada">Limonada — Bs 10</option>
+            <option value="chocolate">Chocolate — Bs 12</option>
+            <option value="infusion">Infusión — Bs 7</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="tazas">Cantidad de tazas</label>
+          <input id="tazas" name="tazas" type="number" min="1" max="20" step="1" placeholder="Ej. 5" required>
+        </div>
+        <button class="btn btn-plum" type="submit">CALCULAR MI CUENTA <span>↗</span></button>
+      </form>
+      <div id="resultado-merienda" class="result" aria-live="polite"><span class="result-mark">♧</span><p>La cuenta del té aparecerá aquí.</p></div>
+    </section>
+
+    <section class="adventure queen" aria-labelledby="queen-title">
+      <div class="section-number">03 <span>· CICLO FOR + IF / ELSE</span></div>
+      <div class="section-heading">
+        <div><p class="eyebrow">¡QUE COMIENCE EL DESAFÍO!</p><h2 id="queen-title">La Reina de Corazones</h2></div>
+        <div class="character-icon">♥</div>
+      </div>
+      <p class="story">La Reina ha ordenado revisar una secuencia de cartas numeradas. Analiza desde la carta 1 hasta el número que elijas y descubre qué grupo suma más.</p>
+      <div class="rule-box queen-rule">
+        <span class="rule-label">MISIÓN</span>
+        <strong>Clasificar, contar y sumar</strong>
+        <small>Ingresa un número entero del 1 al 100. Los números se separarán en pares e impares.</small>
+      </div>
+      <form id="form-reina" class="form-card" novalidate>
+        <div class="field">
+          <label for="numero-cartas">¿Cuántas cartas analizamos?</label>
+          <input id="numero-cartas" name="cartas" type="number" min="1" max="100" step="1" placeholder="Ej. 10" required>
+        </div>
+        <button class="btn btn-red" type="submit">ANALIZAR LAS CARTAS <span>↗</span></button>
+      </form>
+      <div id="resultado-reina" class="result result-large" aria-live="polite"><span class="result-mark">♠</span><p>La Reina espera tu secuencia.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>“La imaginación es el comienzo de toda aventura.”</p>
+    <small>PROYECTO ACADÉMICO · HTML5 · CSS3 · JAVASCRIPT NATIVO</small>
+  </footer>
+</body>
+</html>
